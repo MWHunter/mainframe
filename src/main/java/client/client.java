@@ -1,21 +1,12 @@
 package client;
 
-import defineoutside.network.DataStatistics;
-import defineoutside.network.NetworkInfo;
 import defineoutside.network.ServerCommand;
 
 import java.io.*;
-import java.lang.management.ManagementFactory;
-import javax.management.MBeanServer;
-import java.lang.management.MemoryMXBean;
-import java.lang.management.MemoryUsage;
-import java.lang.management.OperatingSystemMXBean;
 import java.net.Socket;
-import java.net.SocketException;
-import java.util.logging.Level;
 
 public class client {
-    static NetworkInfo connectToMainframe(String host, Integer port, String name) throws IOException {
+    static Socket connectToMainframe(String host, Integer port, String name) throws IOException {
 
         Socket s = new Socket(host, port);
         DataInputStream dis = new DataInputStream(s.getInputStream());
@@ -28,7 +19,7 @@ public class client {
             dos.writeUTF("4v2NZ8RTar54k4PoYEsnjxpL0IObNMgediJQP65QwUwmm9hBw1hQCJvxcSo6tIDwiHY2RkYzmVMWIpN8Oe4rrmPxVum2PBwBnL6");
             dos.writeUTF(name);
 
-            return new NetworkInfo(dis, dos);
+            return s;
         }
         return null;
     }
@@ -36,7 +27,7 @@ public class client {
     public static void main(String[] args) {
         System.out.println("Running");
 
-        ConnectToMainframe("192.168.1.196");
+        ConnectToMainframe("127.0.0.1");
         /*try {
             Runnable myRunnable = new Runnable() {
                 public void run() {
@@ -105,16 +96,14 @@ public class client {
         }*/
     }
 
-    static NetworkInfo networkInfo;
-
     public static void ConnectToMainframe(String host) {
         Runnable connect = () -> {
             while (true) {
                 ObjectInputStream objectInputStream = null;
                 try {
-                    networkInfo = connectToMainframe(host, 27469, "Generic#Input");
+                    Socket socket = connectToMainframe(host, 27469, "Generic#Input");
                     System.out.println("Connected to the central server #Input");
-                    objectInputStream = new ObjectInputStream(networkInfo.getDataInputStream());
+                    objectInputStream = new ObjectInputStream(socket.getInputStream());
                 } catch (IOException e) {
                     // it restarts later
                 }
