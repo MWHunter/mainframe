@@ -1,0 +1,17 @@
+spawnlocations:
+  attackers:
+  - "0,70,-18"
+  - "5,70,-18"
+  - "-5,70,-18"
+  defenders:
+  - "0,70,18"
+  - "5,70,18"
+  - "-5,70,18"
+teams:
+  - "attackers"
+  - "defenders"
+kitselector:
+  attackers:
+  - "selectstuff.yml"
+  defenders:
+  - "selectstuffno.yml"

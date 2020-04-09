@@ -4,36 +4,17 @@ import java.io.Serializable;
 import java.net.InetAddress;
 
 public class AddNonSubServer implements Serializable {
-    String name;
-    InetAddress inetAddress;
-    int port;
-    public AddNonSubServer(String name, InetAddress inetAddress, int port) {
+    public boolean add;
+    public boolean lobby;
+    public String name;
+    public InetAddress inetAddress;
+    public int port;
+
+    public AddNonSubServer(boolean add, boolean lobby, String name, InetAddress inetAddress, int port) {
+        this.add = add;
+        this.lobby = lobby;
         this.name = name;
         this.inetAddress = inetAddress;
-        this.port = port;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public InetAddress getInetAddress() {
-        return inetAddress;
-    }
-
-    public void setInetAddress(InetAddress inetAddress) {
-        this.inetAddress = inetAddress;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
         this.port = port;
     }
 }

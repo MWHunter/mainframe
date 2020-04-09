@@ -1,0 +1,44 @@
+(11:26:17) Matrix Enabled!
+(11:26:17) Version: 4.6.1
+(11:28:56) Matrix Enabled!
+(11:28:56) Version: 4.6.1
+(11:29:04) DefineOutside failed Block check | abort breaking (at: -3.0,64.0,-77.0, type: stone) (+0) | vl:0 ping:0 tps:18.85 lp:25 component: block.abort
+(11:31:03) Matrix Enabled!
+(11:31:04) Version: 4.6.1
+(11:32:47) Matrix Enabled!
+(11:32:47) Version: 4.6.1
+(11:35:09) Matrix Enabled!
+(11:35:09) Version: 4.6.1
+(11:36:59) Matrix Enabled!
+(11:36:59) Version: 4.6.1
+(11:43:26) Matrix Enabled!
+(11:43:26) Version: 4.6.1
+(12:01:21) Matrix Enabled!
+(12:01:21) Version: 4.6.1
+(12:04:24) Matrix Enabled!
+(12:04:24) Version: 4.6.1
+(12:18:41) Matrix Enabled!
+(12:18:41) Version: 4.6.1
+(12:52:02) Matrix Enabled!
+(12:52:02) Version: 4.6.1
+(12:52:19) DefineOutside failed Block check | abort breaking (at: 3.0,64.0,-78.0, type: dark_oak_planks) (+0) | vl:0 ping:0 tps:20.0 lp:20 component: block.abort
+(13:00:46) Matrix Enabled!
+(13:00:46) Version: 4.6.1
+(13:01:02) DefineOutside failed Block check | abort breaking (at: 4.0,70.0,3.0, type: stone_brick_slab) (+0) | vl:0 ping:0 tps:19.99 lp:0 component: block.abort
+(13:07:59) Matrix Enabled!
+(13:07:59) Version: 4.6.1
+(13:13:34) Matrix Enabled!
+(13:13:34) Version: 4.6.1
+(13:36:00) Matrix Enabled!
+(13:36:00) Version: 4.6.1
+(13:36:59) Matrix Enabled!
+(13:36:59) Version: 4.6.1
+(13:51:47) Matrix Enabled!
+(13:51:47) Version: 4.6.1
+(14:23:13) Matrix Enabled!
+(14:23:13) Version: 4.6.1
+(14:31:06) Matrix Enabled!
+(14:31:06) Version: 4.6.1
+(14:41:03) Matrix Enabled!
+(14:41:03) Version: 4.6.1
+(14:41:19) DefinePvP failed Block check | abort breaking (at: -1.0,63.0,-75.0, type: stone_bricks) (+0) | vl:0 ping:0 tps:19.99 lp:20 component: block.abort

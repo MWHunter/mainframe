@@ -1,0 +1,41 @@
+(12:14:55) Matrix Enabled!
+(12:14:55) Version: 4.7.0
+(12:17:53) Matrix Enabled!
+(12:17:53) Version: 4.7.0
+(12:24:33) Matrix Enabled!
+(12:24:33) Version: 4.7.0
+(13:13:51) Matrix Enabled!
+(13:13:51) Version: 4.7.0
+(13:26:02) Matrix Enabled!
+(13:26:02) Version: 4.7.0
+(13:38:46) Matrix Enabled!
+(13:38:46) Version: 4.7.0
+(15:08:04) Matrix Enabled!
+(15:08:04) Version: 4.7.0
+(15:13:48) Matrix Enabled!
+(15:13:48) Version: 4.7.0
+(15:24:11) Matrix Enabled!
+(15:24:11) Version: 4.7.0
+(15:36:25) Matrix Enabled!
+(15:36:25) Version: 4.7.0
+(15:44:36) Matrix Enabled!
+(15:44:36) Version: 4.7.0
+(15:49:05) Matrix Enabled!
+(15:49:05) Version: 4.7.0
+(15:49:13) DefineOutside failed Block check | abort breaking (at: -3.0,70.0,4.0, type: stone_brick_slab) (+0) | vl:0 ping:0 tps:20.0 lp:0 component: block.abort
+(20:20:20) Matrix Enabled!
+(20:20:20) Version: 4.7.0
+(20:21:25) Matrix Enabled!
+(20:21:25) Version: 4.7.0
+(20:33:52) Matrix Enabled!
+(20:33:52) Version: 4.7.0
+(20:39:47) Matrix Enabled!
+(20:39:47) Version: 4.7.0
+(20:41:26) DefinePvP failed Block check | abort breaking (at: -27.0,67.0,5.0, type: grass_block) (+0) | vl:0 ping:0 tps:20.0 lp:6 component: block.abort
+(20:41:27) DefinePvP failed Block check | abort breaking (at: -30.0,67.0,2.0, type: grass_block) (+0) | vl:0 ping:0 tps:20.0 lp:6 component: block.abort
+(20:45:13) DefineOutside failed KillAura check | (autoclicker) click delay pattern | 1.9+ delay | avg: 249 diff: 7 (+5) | vl:5 ping:4 tps:19.99 lp:224 component: ka.ac.9p
+(20:45:13) Execute command: matrix npc DefineOutside 100
+(20:45:13) DefineOutside failed KillAura check | (autoclicker) click delay pattern | 1.9+ delay | avg: 250 diff: 4 (+5) | vl:10 ping:4 tps:20.0 lp:224 component: ka.ac.9p
+(20:45:14) DefineOutside failed KillAura check | (autoclicker) click delay pattern | 1.9+ delay | avg: 250 diff: 3 (+5) | vl:15 ping:4 tps:20.0 lp:224 component: ka.ac.9p
+(20:45:17) DefineOutside failed KillAura check | (autoclicker) click delay pattern | 1.9+ delay | avg: 249 diff: 6 (+5) | vl:20 ping:4 tps:20.0 lp:224 component: ka.ac.9p
+(20:45:17) Execute command: matrix notify DefineOutside might be using combat hacks (KillAura)

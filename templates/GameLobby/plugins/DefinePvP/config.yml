@@ -1,0 +1,6 @@
+# Kohi values
+knockbackHorizontal: 0.35
+knockbackVertical: 0.35
+knockbackVerticalLimit: 0.4
+knockbackExtraHorizontal: 2.2143
+knockbackExtraVertical: 1.2429

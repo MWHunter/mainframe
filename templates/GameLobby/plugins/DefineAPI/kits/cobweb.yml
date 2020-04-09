@@ -1,0 +1,10 @@
+items: 
+   0: 
+      item: iron_sword
+   1:
+      item: cobweb
+      amount: 8
+   2:
+      item: shears
+   36:
+      item: golden_boots

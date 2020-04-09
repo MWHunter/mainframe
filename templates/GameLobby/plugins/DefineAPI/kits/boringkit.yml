@@ -1,0 +1,18 @@
+items: 
+   0: 
+      item: stone_sword
+   1:
+      item: bow
+   2:
+      item: fishing_rod
+   8:
+      item: arrow
+      amount: 8
+   36:
+      item: iron_boots
+   37:
+      item: iron_leggings
+   38:
+      item: iron_chestplate
+   39:
+      item: iron_helmet

@@ -1,0 +1,8 @@
+npc-data:
+  npc-1:
+    cooldown: 0
+    right-click-commands:
+    - '[player] joinqueue bedwars'
+    left-click-commands:
+    - '[player] joinqueue bedwars'
+    price: 0

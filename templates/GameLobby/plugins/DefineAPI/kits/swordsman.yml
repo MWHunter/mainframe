@@ -1,0 +1,11 @@
+items: 
+   0: 
+      item: stone_axe
+   36:
+      item: iron_boots
+   37:
+      item: iron_leggings
+   38:
+      item: iron_chestplate
+   39:
+      item: iron_helmet

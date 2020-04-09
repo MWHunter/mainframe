@@ -1,0 +1,56 @@
+items: 
+   0: 
+      item: tnt
+      amount: 1
+      name: "EXPLOSION"
+      lore:
+          - "Defuse the bomb with bombs"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: tnt.yml"
+   1: 
+      item: crossbow
+      amount: 1
+      name: "Hipster's bow"
+      lore:
+          - "Crossbow"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: crossbow.yml"
+   2: 
+      item: diamond_sword
+      amount: 1
+      name: "Diamond Sword"
+      lore:
+          - "You focused a bit too much on damage"
+          - "But you get a cool hat"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: aggressive.yml"
+   3: 
+      item: trident
+      amount: 1
+      name: "Channeling trident (soon)"
+      lore:
+          - "Just use your imagination"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: trident.yml"
+   4: 
+      item: fishing_rod
+      amount: 1
+      name: "Fisher"
+      lore:
+          - "Rod is for fishing use only"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: fish.yml"
+   4: 
+      item: cobweb
+      amount: 1
+      name: "Cobweb"
+      lore:
+          - "Slow your enemies, in a different way!"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: cobweb.yml"

@@ -1,0 +1,31 @@
+items: 
+   0: 
+      item: stone_sword
+      amount: 1
+      name: "Join the 1v1 arena!"
+      lore:
+          - "hello"
+          - "this server is in beta"
+          - "be nice to it"
+      tags:
+          - "Queue: duel"
+          - "DefineAPI: Queue"
+   1: 
+      item: iron_sword
+      amount: 1
+      name: "Join the pit"
+      lore:
+          - "finding a good game lobby and sticking in it is fun"
+      tags:
+          - "Queue: pit"
+          - "DefineAPI: Queue"
+   2: 
+      item: redstone_ore
+      amount: 1
+      name: "Join the defusal gamemode"
+      lore:
+          - "DefineOutside created everything else"
+          - "Hilow made a single map"
+      tags:
+          - "Queue: gamelobby: defuse"
+          - "DefineAPI: Queue"

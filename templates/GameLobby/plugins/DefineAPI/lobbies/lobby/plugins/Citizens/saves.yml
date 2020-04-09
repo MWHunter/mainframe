@@ -1,0 +1,32 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 1
+npc:
+  '1':
+    metadata:
+      player-skin-textures: eyJ0aW1lc3RhbXAiOjE1ODQzMTIwNjcyNDUsInByb2ZpbGVJZCI6IjliMGQ0MjQ4Yjk2ZDRhODQ5ZmViODQ3MDg3ZDE2YjFiIiwicHJvZmlsZU5hbWUiOiJCZWRXYXJzIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9hODlmMTI2OWNhYmQ5MWIyNzQwNTkwMjliZTI5YThjNjc3ZjIyMDFiZTNjYjQ2NGFmYmVlMWVjZTE0YzcwZDhjIiwibWV0YWRhdGEiOnsibW9kZWwiOiJzbGltIn19fX0=
+      cached-skin-uuid-name: bedwars
+      cached-skin-uuid: 9b0d4248-b96d-4a84-9feb-847087d16b1b
+      player-skin-signature: LgA/LLyiP7H6MRPjC3PB2Me9JGWbPekgrFRqSWjGXa8BhuPqg5XXjs7nMaXbbBdFPw2y3EY7we8QvQg3lL5ytHNWCm644B1DSg1wKNsvMwWNNymlZR2mIvJbtuU2SYdoALda8V/fLKLcJUMs7covrN6bjR+cDo1WbRZq/RPmswSphzvgyoqoiHEz2HN0dmRM9Q9nrgWoNHPNBrGtOAD5ehGZr2LvnzvOVSABPJlQH9isdNoWKupY8epNu8WZb1aBxgU/cDHiDHk687BqJqGHAvwTdayIHqVthP3m7ckWh5cg7tSJqFupX5vlSfkfAaPROjr0npH2HkNfPzkwvNRmDRPrO9NcnERw9fEfI0Vg6m99a9IWurHhik2qhc5MdPqOZsjQFupRUZJJdabSUc3r3j2grpzhq9WBXa3eZu507OU23AZmgJpP0dY68q1QG0iuqbi2rUKsh0WJ5N2BSlyBnR2GJ7+pECZf1Xtdxrv7HKd+JXG7l97OtcmYsJppVpRCyO4654WGEhE7vDj5Dv4zU7vFdtMKJTIpANppSbuJkUAjjnrv+U8r669BDlJpiuHk/cooDK13HVcCfWfRc9g8sHYn5SDEaoiI1WCCAeNjkHxBC6pVP1Jj5APV1duAx6/WpPgYZWol9UVUX9aWqbJ7qWsqntuebz8O0yGZIjgmuDQ=
+    name: §bJoin Bedwars!
+    uuid: e1235592-8e2e-448f-9d51-52894ea9654c
+    traits:
+      gravity:
+        enabled: false
+      location:
+        world: world
+        x: '0.5'
+        y: '58.0'
+        z: '39.5'
+        yaw: '-179.9745'
+        pitch: '0.0'
+      type: SHEEP
+      spawned: true
+      owner:
+        owner: DefineOutside
+        uuid: aadd63d0-e545-4cc2-8449-734a6dba0b85
+    traitnames: location,type,owner,scoreboardtrait,inventory,gravity,spawned,equipment,mounttrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true

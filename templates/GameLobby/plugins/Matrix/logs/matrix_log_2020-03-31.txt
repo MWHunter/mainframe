@@ -1,0 +1,68 @@
+(10:54:31) Matrix Enabled!
+(10:54:31) Version: 4.7.0
+(11:54:04) Matrix Enabled!
+(11:54:04) Version: 4.7.0
+(12:01:26) Matrix Enabled!
+(12:01:26) Version: 4.7.0
+(12:04:17) Matrix Enabled!
+(12:04:17) Version: 4.7.0
+(12:05:05) Matrix Enabled!
+(12:05:05) Version: 4.7.0
+(12:08:52) Matrix Enabled!
+(12:08:52) Version: 4.7.0
+(12:15:49) Matrix Enabled!
+(12:15:49) Version: 4.7.0
+(12:16:46) Matrix Enabled!
+(12:16:46) Version: 4.7.0
+(15:22:05) Matrix Enabled!
+(15:22:05) Version: 4.7.0
+(15:26:13) Matrix Enabled!
+(15:26:13) Version: 4.7.0
+(15:41:57) Matrix Enabled!
+(15:41:57) Version: 4.7.0
+(15:42:28) player4 failed Block check | abort breaking (at: -4.0,70.0,-4.0, type: stone_brick_slab) (+0) | vl:0 ping:0 tps:20.0 lp:17 component: block.abort
+(15:46:05) Matrix Enabled!
+(15:46:05) Version: 4.7.0
+(15:51:18) Matrix Enabled!
+(15:51:18) Version: 4.7.0
+(15:51:49) player4 failed Speed check | suspicious movement (move: 2.236, tag: gv-) (+10) | vl:10 ping:0 tps:20.0 lp:1 component: speed.main
+(15:55:41) Matrix Enabled!
+(15:55:41) Version: 4.7.0
+(15:57:15) Matrix Enabled!
+(15:57:15) Version: 4.7.0
+(16:02:20) Matrix Enabled!
+(16:02:20) Version: 4.7.0
+(16:03:16) Matrix Enabled!
+(16:03:16) Version: 4.7.0
+(16:03:52) Matrix Enabled!
+(16:03:52) Version: 4.7.0
+(16:04:07) player1 failed Block check | abort breaking (at: 1.0,68.0,-3.0, type: stone_bricks) (+0) | vl:0 ping:0 tps:20.0 lp:0 component: block.abort
+(16:05:44) Matrix Enabled!
+(16:05:44) Version: 4.7.0
+(16:07:43) Matrix Enabled!
+(16:07:43) Version: 4.7.0
+(16:10:30) Matrix Enabled!
+(16:10:30) Version: 4.7.0
+(16:11:40) player4 failed Speed check | suspicious movement (move: 1.0, tag: gv-) (+10) | vl:10 ping:0 tps:20.0 lp:1 component: speed.main
+(16:13:03) Matrix Enabled!
+(16:13:03) Version: 4.7.0
+(16:13:52) Matrix Enabled!
+(16:13:52) Version: 4.7.0
+(16:14:37) player4 failed Block check | abort breaking (at: 70.0,63.0,0.0, type: stone_bricks) (+0) | vl:0 ping:2 tps:20.0 lp:136 component: block.abort
+(16:14:37) player4 failed Block check | break block too fast (digs: 1/6, hardness: 0.2, block: lime_bed) (+4) | vl:4 ping:2 tps:20.0 lp:136 component: block.fastbreak.expect
+(20:38:19) Matrix Enabled!
+(20:38:19) Version: 4.7.0
+(20:42:34) DefineOutside failed Block check | abort breaking (at: -3.0,69.0,-4.0, type: stone_bricks) (+0) | vl:0 ping:0 tps:20.0 lp:14 component: block.abort
+(20:48:21) Matrix Enabled!
+(20:48:21) Version: 4.7.0
+(20:48:28) DefineOutside failed Block check | abort breaking (at: -4.0,69.0,-2.0, type: stone_brick_stairs) (+0) | vl:0 ping:0 tps:20.0 lp:0 component: block.abort
+(21:07:49) Matrix Enabled!
+(21:07:49) Version: 4.7.0
+(21:15:02) Matrix Enabled!
+(21:15:02) Version: 4.7.0
+(21:18:13) Matrix Enabled!
+(21:18:13) Version: 4.7.0
+(21:18:52) Matrix Enabled!
+(21:18:52) Version: 4.7.0
+(21:24:34) Matrix Enabled!
+(21:24:34) Version: 4.7.0

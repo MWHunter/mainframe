@@ -1,0 +1,13 @@
+(13:50:03) Matrix Enabled!
+(13:50:03) Version: 4.6.1
+(13:57:05) Matrix Enabled!
+(13:57:05) Version: 4.6.1
+(14:04:15) Matrix Enabled!
+(14:04:15) Version: 4.6.1
+(14:25:18) Matrix Enabled!
+(14:25:18) Version: 4.6.1
+(14:26:05) DefineOutside failed Block check | abort breaking (at: -2.0,69.0,-4.0, type: stone_brick_stairs) (+0) | vl:0 ping:0 tps:19.99 lp:0 component: block.abort
+(14:26:05) DefineOutside failed HitBox check | missed player hitbox (raytrace: 1/11 positions, lag: 11, prep: true) (+2) | vl:2 ping:0 tps:19.99 lp:0 component: hb.mis
+(14:28:26) Matrix Enabled!
+(14:28:26) Version: 4.6.1
+(14:29:26) DefineOutside failed Block check | abort breaking (at: 0.0,71.0,0.0, type: granite) (+0) | vl:0 ping:0 tps:20.0 lp:0 component: block.abort

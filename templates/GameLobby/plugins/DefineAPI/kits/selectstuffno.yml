@@ -1,0 +1,50 @@
+items: 
+   0:
+      item: lingering_potion
+      effect: slowness
+      extended: false
+      upgraded: false
+      name: "Slow"
+      lore:
+          - "Slow people down with this kit!"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: slowness.yml"
+   1: 
+      item: shield
+      amount: 1
+      name: "Shield"
+      lore:
+          - "Coward"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: shield.yml"
+   2: 
+      item: iron_chestplate
+      amount: 1
+      name: "Axeman"
+      lore:
+          - "The only counter to a shield!"
+          - "Axe does 1.8 damage levels"
+          - "Meaning you can't two hit everyone"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: swordsman.yml"
+   3: 
+      item: diamond_chestplate
+      amount: 1
+      name: "Tank"
+      lore:
+          - "Who needs a team?"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: tank.yml"
+   4: 
+      item: bow
+      amount: 1
+      name: "Bow"
+      lore:
+          - "Bow"
+      tags:
+          - "DefineAPI: Kit"
+          - "Kit: bow.yml"

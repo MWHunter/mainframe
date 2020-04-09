@@ -1,0 +1,10 @@
+items: 
+   8: 
+      item: clock
+      amount: 1
+      name: "Return to lobby"
+      lore:
+          - "Sends you back to the hub"
+      tags:
+          - "Queue: lobby"
+          - "DefineAPI: Queue"

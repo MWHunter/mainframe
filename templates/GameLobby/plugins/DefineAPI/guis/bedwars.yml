@@ -1,0 +1,407 @@
+items:
+   0:
+      item: golden_helmet
+      amount: 1
+      name: "Buy a golden helmet"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineAPI: Inventory"
+          - "Inventory: armor.yml"
+   1:
+      item: iron_helmet
+      amount: 1
+      name: "Buy a iron helmet"
+      lore:
+          - "Cost: 200"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_helmet"
+          - "BuyItemAmount: 1"
+          - "Cost: 200"
+   2:
+      item: diamond_helmet
+      amount: 1
+      name: "Buy a diamond helmet"
+      lore:
+          - "Cost: 350"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_helmet"
+          - "BuyItemAmount: 1"
+          - "Cost: 350"
+   4:
+      item: stone_sword
+      amount: 1
+      name: "Buy a stone sword"
+      lore:
+          - "Cost: 125"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: stone_sword"
+          - "BuyItemAmount: 1"
+          - "Cost: 125"
+   5:
+      item: stone_pickaxe
+      amount: 1
+      name: "Buy a stone pickaxe"
+      lore:
+          - "Cost: 125"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: stone_pickaxe"
+          - "BuyItemAmount: 1"
+          - "Cost: 125"
+   6:
+      item: stone_shovel
+      amount: 1
+      name: "Buy a stone shovel"
+      lore:
+          - "Cost: 125"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: stone_shovel"
+          - "BuyItemAmount: 1"
+          - "Cost: 125"
+   7:
+      item: stone_axe
+      amount: 1
+      name: "Buy a stone axe"
+      lore:
+          - "Cost: 125"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: stone_axe"
+          - "BuyItemAmount: 1"
+          - "Cost: 125"
+   9:
+      item: golden_chestplate
+      amount: 1
+      name: "Buy a golden chestplate"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: golden_chestplate"
+          - "BuyItemAmount: 1"
+          - "Cost: 150"
+   10:
+      item: iron_chestplate
+      amount: 1
+      name: "Buy a iron chestplate"
+      lore:
+          - "Cost: 200"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_chestplate"
+          - "BuyItemAmount: 1"
+          - "Cost: 200"
+   11:
+      item: diamond_chestplate
+      amount: 1
+      name: "Buy a diamond chestplate"
+      lore:
+          - "Cost: 350"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_chestplate"
+          - "BuyItemAmount: 1"
+          - "Cost: 350"
+   13:
+      item: iron_sword
+      amount: 1
+      name: "Buy a iron sword"
+      lore:
+          - "Cost: 250"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_sword"
+          - "BuyItemAmount: 1"
+          - "Cost: 250"
+   14:
+      item: iron_pickaxe
+      amount: 1
+      name: "Buy a iron pickaxe"
+      lore:
+          - "Cost: 250"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_pickaxe"
+          - "BuyItemAmount: 1"
+          - "Cost: 250"
+   15:
+      item: iron_shovel
+      amount: 1
+      name: "Buy a iron shovel"
+      lore:
+          - "Cost: 250"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_shovel"
+          - "BuyItemAmount: 1"
+          - "Cost: 250"
+   16:
+      item: iron_axe
+      amount: 1
+      name: "Buy a iron axe"
+      lore:
+          - "Cost: 250"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_axe"
+          - "BuyItemAmount: 1"
+          - "Cost: 250"
+   18:
+      item: golden_leggings
+      amount: 1
+      name: "Buy golden leggings"
+      lore:
+          - "Cost: 250"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: golden_leggings"
+          - "BuyItemAmount: 1"
+          - "Cost: 250"
+   19:
+      item: iron_leggings
+      amount: 1
+      name: "Buy iron leggings"
+      lore:
+          - "Cost: 200"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_leggings"
+          - "BuyItemAmount: 1"
+          - "Cost: 200"
+   20:
+      item: diamond_leggings
+      amount: 1
+      name: "Buy diamond leggings"
+      lore:
+          - "Cost: 350"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_leggings"
+          - "BuyItemAmount: 1"
+          - "Cost: 350"
+   22:
+      item: diamond_sword
+      amount: 1
+      name: "Buy a diamond sword"
+      lore:
+          - "Cost: 400"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_sword"
+          - "BuyItemAmount: 1"
+          - "Cost: 400"
+   23:
+      item: diamond_pickaxe
+      amount: 1
+      name: "Buy a diamond pickaxe"
+      lore:
+          - "Cost: 400"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_pickaxe"
+          - "BuyItemAmount: 1"
+          - "Cost: 400"
+   24:
+      item: diamond_shovel
+      amount: 1
+      name: "Buy a diamond shovel"
+      lore:
+          - "Cost: 400"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_shovel"
+          - "BuyItemAmount: 1"
+          - "Cost: 400"
+   25:
+      item: diamond_axe
+      amount: 1
+      name: "Buy a diamond axe"
+      lore:
+          - "Cost: 400"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_axe"
+          - "BuyItemAmount: 1"
+          - "Cost: 400"
+   27:
+      item: golden_boots
+      amount: 1
+      name: "Buy golden boots"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: golden_boots"
+          - "BuyItemAmount: 1"
+          - "Cost: 150"
+   28:
+      item: iron_boots
+      amount: 1
+      name: "Buy iron boots"
+      lore:
+          - "Cost: 200"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: iron_boots"
+          - "BuyItemAmount: 1"
+          - "Cost: 200"
+   29:
+      item: diamond_boots
+      amount: 1
+      name: "Buy diamond boots"
+      lore:
+          - "Cost: 350"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: diamond_boots"
+          - "BuyItemAmount: 1"
+          - "Cost: 350"
+   31:
+      item: elytra
+      amount: 1
+      name: "Buy an elytra"
+      lore:
+          - "Cost: 800"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: elytra"
+          - "BuyItemAmount: 1"
+          - "Cost: 800"
+   32:
+      item: trident
+      amount: 1
+      name: "Buy a riptide trident"
+      lore:
+          - "Cost: 650"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: trident"
+          - "BuyItemAmount: 1"
+          - "Cost: 650"
+   33:
+      item: trident
+      amount: 1
+      name: "Buy a loyalty trident"
+      lore:
+          - "Cost: 650"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: trident"
+          - "BuyItemAmount: 1"
+          - "Cost: 650"
+   34:
+      item: golden_apple
+      amount: 1
+      name: "Buy a golden apple"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: golden_apple"
+          - "BuyItemAmount: 1"
+          - "Cost: 150"
+   45:
+      item: oak_planks
+      amount: 8
+      name: "Buy oak planks"
+      lore:
+          - "Cost: 75"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: oak_planks"
+          - "BuyItemAmount: 8"
+          - "Cost: 75"
+   46:
+      item: white_wool
+      amount: 16
+      name: "Buy white wool"
+      lore:
+          - "Cost: 75"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: white_wool"
+          - "BuyItemAmount: 16"
+          - "Cost: 75"
+   47:
+      item: cobblestone
+      amount: 16
+      name: "Buy cobblestone"
+      lore:
+          - "Cost: 100"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: cobblestone"
+          - "BuyItemAmount: 16"
+          - "Cost: 100"
+   48:
+      item: obsidian
+      amount: 1
+      name: "Buy obsidian"
+      lore:
+          - "Cost: 200"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: obsidian"
+          - "BuyItemAmount: 1"
+          - "Cost: 200"
+   49:
+      item: wither_rose
+      amount: 1
+      name: "Buy a wither rose"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: wither_rose"
+          - "BuyItemAmount: 1"
+          - "Cost: 150"
+   50:
+      item: tnt
+      amount: 4
+      name: "Buy a tnt"
+      lore:
+          - "Cost: 125"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: tnt"
+          - "BuyItemAmount: 4"
+          - "Cost: 125"
+   51:
+      item: flint_and_steel
+      amount: 1
+      name: "Buy a flint and steel"
+      lore:
+          - "Cost: 150"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: flint_and_steel"
+          - "BuyItemAmount: 1"
+          - "Cost: 150"
+   52:
+      item: lava_bucket
+      amount: 1
+      name: "Buy a lava bucket"
+      lore:
+          - "Cost: 75"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: lava_bucket"
+          - "BuyItemAmount: 1"
+          - "Cost: 75"
+   53:
+      item: water_bucket
+      amount: 1
+      name: "Buy a water bucket"
+      lore:
+          - "Cost: 75"
+      tags:
+          - "DefineShop: Buy"
+          - "BuyItem: water_bucket"
+          - "BuyItemAmount: 1"
+          - "Cost: 75"
+

@@ -1,0 +1,21 @@
+items: 
+   0: 
+      item: stone_sword
+   1:
+      item: lingering_potion
+      effect: slowness
+      extended: false
+      upgraded: false
+   2:
+      item: splash_potion
+      effect: instant_heal
+      extended: false
+      upgraded: false
+   36:
+      item: golden_boots
+   37:
+      item: golden_leggings
+   38:
+      item: golden_chestplate
+   39:
+      item: golden_helmet

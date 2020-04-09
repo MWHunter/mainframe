@@ -1,0 +1,10 @@
+items: 
+   0: 
+      item: diamond_sword
+   1:
+      item: splash_potion
+      effect: instant_damage
+      extended: false
+      upgraded: true
+   39:
+      item: leather_helmet

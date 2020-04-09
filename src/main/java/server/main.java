@@ -1,64 +1,26 @@
 package server;
 
-import com.influxdb.client.InfluxDBClient;
-import com.influxdb.client.InfluxDBClientFactory;
-import com.influxdb.client.WriteApi;
-import com.influxdb.client.domain.WritePrecision;
-import com.mongodb.connection.Server;
 import defineoutside.network.*;
+import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.file.*;
-import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.Paths;
+import java.security.MessageDigest;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
 
 public class main {
     private static char[] token = "P-G0GvUxVWlhDOL8v_0UF6PjjSWCnaiHqyxX9JhB5cBI7x4a8H0St42gfr0hTawZVfA5m2_dYLYpkS-eqvC4oQ==".toCharArray();
-    public static HashMap<String, Integer> templateVersions = new HashMap<>();
-    public static HashMap<String, File> templateZips = new HashMap<>();
+    public static ConcurrentHashMap<String, String> templateHashes = new ConcurrentHashMap<>();
 
     //static InfluxDBClient influxDBClient = InfluxDBClientFactory.create("http://192.168.1.123:9999", token);
 
     // Simple program that outputs everything that it receives
-    public static void main(String args[]) throws IOException {
-        File templateList = new File(Paths.get("").toAbsolutePath() + File.separator + "version.txt");
+    public static void main(String args[]) {
 
-        // Get all the templates and their version
-        if (templateList.exists()) {
-            Scanner hostnameReader = new Scanner(templateList);
-            while (hostnameReader.hasNextLine()) {
-                String parseVersion = hostnameReader.nextLine();
-                String template = parseVersion.substring(0, parseVersion.indexOf(","));
-                int version = Integer.parseInt(parseVersion.substring(parseVersion.indexOf(",") + 1));
-
-                templateVersions.put(template, version);
-            }
-        }
-
-        // Make the template folder
-        File templateFolder = new File(Paths.get("").toAbsolutePath() + File.separator + "templates");
-        if (!templateFolder.exists()) {
-            templateFolder.mkdir();
-        }
-
-        // Read all the templates and make zips based on version
-        for (String template : templateVersions.keySet()) {
-            File templateDir = new File(templateFolder + File.separator + template);
-            File zippedDir = new File(templateFolder + File.separator + template + templateVersions.get(template) + ".zip");
-
-            // There is a new template version, but it doesn't exist yet!  So make a zip!
-            if (templateDir.isDirectory() && !zippedDir.exists()) {
-                compress(templateDir.getPath());
-            }
-
-            // Add the template file to the template files
-            templateZips.put(template, zippedDir);
-        }
+        updateFileHashes();
 
         try {
             ServerSocket server = new ServerSocket(27469);
@@ -85,31 +47,67 @@ public class main {
         }
     }
 
-    // Borrowed from https://stackoverflow.com/questions/1091788/how-to-create-a-zip-file-in-java
-    public static void compress(String dirPath) {
-        final Path sourceDir = Paths.get(dirPath);
-        String zipFileName = dirPath.concat(".zip");
+    public static void updateFileHashes() {
         try {
-            final ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFileName));
-            Files.walkFileTree(sourceDir, new SimpleFileVisitor<Path>() {
-                @Override
-                public FileVisitResult visitFile(Path file, BasicFileAttributes attributes) {
-                    try {
-                        Path targetFile = sourceDir.relativize(file);
-                        outputStream.putNextEntry(new ZipEntry(targetFile.toString()));
-                        byte[] bytes = Files.readAllBytes(file);
-                        outputStream.write(bytes, 0, bytes.length);
-                        outputStream.closeEntry();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    return FileVisitResult.CONTINUE;
+            // Make the template folder
+            File templateFolder = new File(Paths.get("").toAbsolutePath() + File.separator + "templates");
+
+            if (!templateFolder.exists()) {
+                templateFolder.mkdir();
+            }
+
+            MessageDigest shaDigest = MessageDigest.getInstance("SHA-1");
+
+            ConcurrentHashMap<String, String> newFiles = new ConcurrentHashMap<>();
+
+            // Try to read directories
+            for (Iterator<File> it = FileUtils.iterateFiles(templateFolder, null, false); it.hasNext(); ) {
+                File nextFile = it.next();
+
+                // See if this is a valid template, and not a stray file
+                if (!nextFile.isDirectory() && nextFile.getName().contains(".zip")) {
+                    newFiles.put(nextFile.getName(), getFileChecksum(shaDigest, nextFile));
                 }
-            });
-            outputStream.close();
-        } catch (IOException e) {
+            }
+
+            templateHashes = newFiles;
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    // Borrowed from https://howtodoinjava.com/java/io/how-to-generate-sha-or-md5-file-checksum-hash-in-java/
+    private static String getFileChecksum(MessageDigest digest, File file) throws IOException {
+        //Get file input stream for reading the file content
+        FileInputStream fis = new FileInputStream(file);
+
+        //Create byte array to read data in chunks
+        byte[] byteArray = new byte[1024];
+        int bytesCount = 0;
+
+        //Read file data and update in message digest
+        while ((bytesCount = fis.read(byteArray)) != -1) {
+            digest.update(byteArray, 0, bytesCount);
+        }
+        ;
+
+        //close the stream; We don't need it now.
+        fis.close();
+
+        //Get the hash's bytes
+        byte[] bytes = digest.digest();
+
+        //This bytes[] has bytes in decimal format;
+        //Convert it to hexadecimal format
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bytes.length; i++) {
+            sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+        }
+
+        //return complete hash
+        return sb.toString();
     }
 
     //public static InfluxDBClient getInfluxDBClient() {
@@ -146,6 +144,14 @@ class Input extends Thread {
                     }
                 }
             }
+
+            if (command.equalsIgnoreCase("updatetemplates")) {
+                main.updateFileHashes();
+            }
+
+            if (command.equalsIgnoreCase("help")) {
+                System.out.println("Valid commands: openhosts, queue, servers, updatetemplates, help");
+            }
         }
     }
 }
@@ -181,6 +187,7 @@ class ClientHandler extends Thread {
         String hostName = "";
 
         // Make sure that the client is correct, after sending secret pass code
+        // I should probably use real encryption sometime, but this will do for now.
         try {
             dataOutputStream = new DataOutputStream(s.getOutputStream());
             dataOutputStream.writeUTF("CRva7SfCPaiBrS7cZh6bNXuupO0qnfOYrgOCZceQFWcFjbiksI1mgcUyhO31AZtz10k6Kj8Ji5XQ0pMObC2BXEKg2XptcVjFdGf");
@@ -194,8 +201,6 @@ class ClientHandler extends Thread {
         if (!received.equals("4v2NZ8RTar54k4PoYEsnjxpL0IObNMgediJQP65QwUwmm9hBw1hQCJvxcSo6tIDwiHY2RkYzmVMWIpN8Oe4rrmPxVum2PBwBnL6")) {
             return;
         }
-
-        System.out.println("Authentication complete");
 
         DataInputStream dataInputStream1 = null;
         try {
@@ -232,7 +237,6 @@ class ClientHandler extends Thread {
 
                     // Send the queue'd stuff
                     synchronized (transferPlayer) {
-
                         for (PlayerTransferData playerTransferData : transferPlayer) {
                             // Only send players to ready servers
                             System.out.println(playerTransferData.getPlayerUUID() + playerTransferData.getSubServer() + " is a player transfer object");
@@ -242,15 +246,13 @@ class ClientHandler extends Thread {
                         transferPlayer.clear();
                     }
 
-
-
-                    /*synchronized (addHub) {
+                    synchronized (addHub) {
                         for (HubAddOrRemove hubAddOrRemove : addHub) {
                             objectOutputStream = new ObjectOutputStream(s.getOutputStream());
                             objectOutputStream.writeObject(hubAddOrRemove);
                         }
-                        addRegularServer.clear();
-                    }*/
+                        addHub.clear();
+                    }
 
                     Thread.sleep(50);
                 }
@@ -291,6 +293,9 @@ class ClientHandler extends Thread {
                     Thread.sleep(50);
                 }
             } catch (Exception e) {
+
+                QueueLogic.removeGame(internalName);
+
                 e.printStackTrace();
             }
 
@@ -460,8 +465,10 @@ class ClientHandler extends Thread {
                         Thread.sleep(50);
 
                     } catch (IOException | InterruptedException e) {
-                        e.printStackTrace();
-                        System.out.println("Connection closed");
+                        // Remove the server
+                        addRegularServer.add(new AddNonSubServer(true, false /* this shouldn't matter*/, internalName, null, 0));
+
+                        System.out.println("Connection closed for server " + internalName);
                         return;
                     }
                 }
@@ -469,51 +476,62 @@ class ClientHandler extends Thread {
         }
 
         if (hostName.contains("#Host")) {
-            while (true) {
-                try {
-                    objectInputStream = new ObjectInputStream(s.getInputStream());
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try {
+                objectOutputStream = new ObjectOutputStream(s.getOutputStream());
+                objectOutputStream.writeObject(main.templateHashes);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (hostName.contains("#Fetch")) {
+            try {
+                dataInputStream = new DataInputStream(s.getInputStream());
+                String fileName = dataInputStream.readUTF();
+
+                File testzip = new File(Paths.get("").toAbsolutePath() +
+                        File.separator + "templates" + File.separator + fileName);
+
+                BufferedInputStream in = new BufferedInputStream(new FileInputStream(testzip/*main.templateZips.get("test")*/));
+                OutputStream os = new DataOutputStream(s.getOutputStream());
+
+                int c = 0;
+                byte[] buff = new byte[8192];
+
+                System.out.println("Writing the file " + testzip.getName() + " into the buffer with size " + testzip.length());
+
+                while ((c = in.read(buff)) > 0) { // read something from inputstream into buffer
+                    // if something was read
+                    os.write(buff, 0, c);
+                    System.out.println("Wrote " + c);
                 }
 
-                while (true) {
-                    Object receivedObject = null;
+                System.out.println("C ending value! " + c);
 
-                    try {
-                        receivedObject = objectInputStream.readObject();
-                    } catch (ClassNotFoundException | IOException e) {
-                        return;
-                    }
+                in.close();
+                os.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
-                    if (receivedObject instanceof HashMap) {
-                        HashMap<String, Integer> templateVersions = (HashMap<String, Integer>) receivedObject;
+        if (hostName.contains("#SendCommands")) {
+            try {
+                // Read the object
+                objectInputStream = new ObjectInputStream(s.getInputStream());
+                ServerCommandWithName command = (ServerCommandWithName) objectInputStream.readObject();
 
-                        for (String key : templateVersions.keySet()) {
-                            System.out.println("Key " + key + " Version " + templateVersions.get(key));
-                        }
+                // Then put it into the commands list for that server
+                List<ServerCommand> commandsList = sendCommand.get(command.serverName);
+                commandsList.add(new ServerCommand(command.command));
+                sendCommand.put(command.serverName, commandsList);
 
-                        try {
-                            InputStream in = s.getInputStream();
-                            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(main.templateZips.get("test")));
-
-                            int c=0;
-                            byte[] buff=new byte[2048];
-
-                            while((c=in.read(buff))>0){ // read something from inputstream into buffer
-                                // if something was read
-                                bos.write(buff, 0, c);
-                            }
-
-                            in.close();
-                            bos.close();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
+
 
     static void addCommand(String host, ServerCommand serverCommand) {
         List<ServerCommand> previousCommands = sendCommand.get(host);

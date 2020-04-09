@@ -1,0 +1,18 @@
+items: 
+   0: 
+      item: iron_sword
+   1:
+      item: bow
+   2:
+      item: fishing_rod
+   8:
+      item: arrow
+      amount: 8
+   36:
+      item: diamond_boots
+   37:
+      item: diamond_leggings
+   38:
+      item: diamond_chestplate
+   39:
+      item: diamond_helmet

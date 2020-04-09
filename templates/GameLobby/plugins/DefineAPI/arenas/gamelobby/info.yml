@@ -1,0 +1,13 @@
+spawnlocations:
+  attackers:
+  - "0,70,0"
+  defenders:
+  - "0,70,0"
+teams:
+  - "attackers"
+  - "defenders"
+kitselector:
+  attackers:
+  - "compassleaveonly.yml"
+  defenders:
+  - "compassleaveonly.yml"

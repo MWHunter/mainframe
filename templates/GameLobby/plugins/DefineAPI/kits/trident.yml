@@ -1,0 +1,10 @@
+items: 
+   0: 
+      item: trident
+      enchants:
+        - riptide 3
+        - unbreaking 3
+   37:
+      item: leather_leggings
+   38:
+      item: leather_chestplate

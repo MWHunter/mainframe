@@ -1,0 +1,16 @@
+items: 
+   0: 
+      item: wooden_sword
+   1: 
+      item: bow
+   2: 
+      item: arrow
+      amount: 12
+   36:
+      item: leather_boots
+   37:
+      item: leather_leggings
+   38:
+      item: leather_chestplate
+   39:
+      item: leather_helmet

@@ -1,0 +1,16 @@
+items: 
+   0: 
+      item: stone_sword
+   1:
+      item: tnt
+      amount: 2
+   2:
+      item: flint_and_steel
+   36:
+      item: chainmail_boots
+   37:
+      item: chainmail_leggings
+   38:
+      item: chainmail_chestplate
+   39:
+      item: chainmail_helmet

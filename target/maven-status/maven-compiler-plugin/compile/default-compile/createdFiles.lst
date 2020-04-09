@@ -9,7 +9,6 @@ client\sparkCPUTest.class
 defineoutside\network\AddNonSubServer.class
 client\sparkCPU$CpuMonitor$OperatingSystemMXBean.class
 server\main.class
-defineoutside\network\NetworkInfo.class
 defineoutside\network\HubAddOrRemove.class
 defineoutside\creator\DefineTeam.class
 client\sparkCPU$CpuMonitor$RollingAverageCollectionTask.class

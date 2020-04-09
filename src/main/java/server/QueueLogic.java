@@ -66,18 +66,21 @@ public class QueueLogic extends Thread {
                     searchForGames(players.subList(availableSlots, players.size()), gameType);
                 }
             } else {
-                if (ClientHandler.openHosts.size() != 0) {
-                    // Create a host with this gamemode
-                    String randomOpenHost = ClientHandler.openHosts.get(0);
-                    ClientHandler.addCommand(randomOpenHost, new ServerCommand("setgamemode " + gameType));
+                if (players.size() >= getMinPlayers(gameType)) {
+                    if (players.size() >= getMinPlayers(gameType) && ClientHandler.openHosts.size() != 0) { // Don't waste servers or transfer without enough players to begin a new game
+                        // Create a host with this gamemode
+                        String randomOpenHost = ClientHandler.openHosts.get(0);
+                        ClientHandler.addCommand(randomOpenHost, new ServerCommand("setgamemode " + gameType));
 
-                    System.out.println("Created new game of gameType " + gameType);
+                        System.out.println("Created new game of gameType " + gameType);
 
-                } else {
-                    System.out.println("We have ran out of open hosts!  Order more servers!");
+                    } else {
+                        System.out.println("We have ran out of open hosts!  Order more servers!");
+                    }
                 }
-
             }
+        } else {
+            queueForGametype.remove(gameType);
         }
     }
 
@@ -175,6 +178,16 @@ public class QueueLogic extends Thread {
         }
         gameList.add(internalServerInfo);
         allGamesOnNetwork.put(internalServerInfo.gameType, gameList);
+    }
+
+    public static void removeGame(String serverName) {
+        for (HashSet<ServerInfo> serverInfo : allGamesOnNetwork.values()) {
+            for (ServerInfo servers : serverInfo) {
+                if (servers.serverUUID.equalsIgnoreCase(serverName)) {
+                    removeGame(servers);
+                }
+            }
+        }
     }
 
     public static void removeGame(ServerInfo internalServerInfo) {
